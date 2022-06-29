@@ -1,0 +1,15 @@
+﻿<Window x:Class="Projekt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt"
+        mc:Ignorable="d"
+        Title="Dziennik" Height="450" Width="800"
+        Background="#FF303030">
+    <Grid Margin="189,0,369,10" Height="387" VerticalAlignment="Bottom">
+        <TextBlock Text="Dziennik ocen" FontSize="50" Margin="-158,-21,-178,0" FontWeight="Bold" Foreground="#FFECE20C" FontFamily="Bahnschrift" Grid.RowSpan="3" />
+        <DataGrid Margin="-158,57,-302,0" Foreground="#FFDC4545" Background="#FF6A6A6A" Name="data1" BorderBrush="#FF0081FF" Grid.RowSpan="3">
+        </DataGrid>
+    </Grid>
+</Window>
