@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt"
         mc:Ignorable="d"
-        Title="Dziennik" Height="450" Width="800"
+        Title="Dziennik elektroniczny" Height="450" Width="800"
         Background="#FF303030">
     <Window.Resources>
         <Style TargetType="DataGridColumnHeader">
@@ -28,9 +28,10 @@
             <Setter Property="VerticalScrollBarVisibility" Value="Hidden" />
         </Style>
     </Window.Resources>
-    <Grid Margin="189,0,369,10" Height="387" VerticalAlignment="Bottom">
-        <TextBlock Text="Dziennik ocen" FontSize="50" Margin="-158,-21,-178,0" FontWeight="Bold" Foreground="#FFECE20C" FontFamily="Bahnschrift" Grid.RowSpan="3" />
-        <DataGrid Margin="-158,57,-302,0" Foreground="White" Background="#FF6A6A6A" Name="data1" BorderBrush="#FF0081FF" Grid.RowSpan="3">
-        </DataGrid>
-    </Grid>
+
+    <StackPanel VerticalAlignment="Top">
+        <ScrollViewer></ScrollViewer>
+        <TextBlock Text="Dziennik ocen" FontSize="50" FontWeight="Bold" Foreground="#FFECE20C" FontFamily="Bahnschrift" VerticalAlignment="Top" HorizontalAlignment="Left" Width="600" Height="62" />
+        <DataGrid Foreground="White" Background="#FF6A6A6A" Name="data1" BorderBrush="#FF0081FF" Height="304" />
+    </StackPanel>
 </Window>
