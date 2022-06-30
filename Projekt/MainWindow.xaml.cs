@@ -21,11 +21,21 @@ namespace Projekt
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<Student> MyStudents { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
-        }
 
-        "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ProjektData;"
+            ProjektDataContext db = new ProjektDataContext();
+
+            var stu = from d in db.Students
+                      select new
+                      {
+                          Uczeń = d.Names,
+                      };
+
+            data1.ItemsSource = stu.ToList();
+        }
     }
 }
